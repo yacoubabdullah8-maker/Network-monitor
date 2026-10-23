@@ -1,0 +1,15 @@
+{
+    "target_network": "192.0.2.0/24",
+    "target_server": "192.0.2.10",
+    "interface": "auto",
+    "nmap_path": "auto",
+    "ports": {
+        "22": "SSH",
+        "80": "HTTP",
+        "1433": "SQL Server",
+        "5693": "NCPA",
+        "9090": "Service"
+    },
+    "scan_interval": 300,
+    "email_cooldown": 60
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=Network Security Monitor - Nmap Packet Capture Email
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/network-monitor
+EnvironmentFile=/opt/network-monitor/.env
+ExecStart=/opt/network-monitor/.venv/bin/python /opt/network-monitor/main.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
